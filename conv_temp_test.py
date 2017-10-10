@@ -22,7 +22,7 @@ class f_to_cBadInput(unittest.TestCase):    #defines test for blank Farenheit in
 		self.assertRaises(conv_temp.InvalidTemperatureError, conv_temp.f_to_c, '')
 	
 	def test_absolutezero(self):    #defines test for passing temperature limit (absolute zero in Farenheit)
-		'''c_to_f should fail when queried past absolute zero (-459.67)'''
+		'''f_to_c should fail when queried past absolute zero (-459.67)'''
 		self.assertRaises(conv_temp.OutOfRangeError, conv_temp.c_to_f, -459.67)
 
 class RoundTripCheck(unittest.TestCase):    #test for converting converted input to ensure original input is returned
